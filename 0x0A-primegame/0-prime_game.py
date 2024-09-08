@@ -26,6 +26,7 @@ def isWinner(x, nums):
             y += 1
         my_filter[i] = y
 
+    
     player1 = 0
 
     for x in nums:
