@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Module for rotating a 2D matrix 90 degrees clockwise."""
+"""_summary_
+"""
 
 
 def transpose_matrix(matrix, n):
-    """Transposes the given matrix in place.
+    """_summary_
 
     Args:
-        matrix (list of list of int): The 2D matrix to be transposed.
-        n (int): The dimension of the square matrix.
+                    matrix (_type_): _description_
     """
     for i in range(n):
         for j in range(i, n):
@@ -15,25 +15,45 @@ def transpose_matrix(matrix, n):
 
 
 def reverse_matrix(matrix):
-    """Reverses each row of the given matrix in place.
+    """_summary_
 
     Args:
-        matrix (list of list of int): The 2D matrix whose rows will be reversed.
+                    matrix (_type_): _description_
     """
     for row in matrix:
         row.reverse()
 
 
 def rotate_2d_matrix(matrix):
-    """Rotates a 2D matrix 90 degrees clockwise in place.
+    """_summary_
 
     Args:
-        matrix (list of list of int): The 2D matrix to be rotated.
+                    matrix (_type_): _description_
     """
     n = len(matrix)
+    # print(n)
 
-    # Step 1: Transpose the matrix
+    """sample matrix
+    1 2 3
+    4 5 6
+    7 8 9
+    """
+
+    # transpose matrix
+    """
+    1 4 7
+    2 5 8
+    3 6 9
+    """
+
     transpose_matrix(matrix, n)
 
-    # Step 2: Reverse each row of the transposed matrix
+    # reverse matrix
+    """
+    7 4 1
+    8 5 2
+    9 6 3
+    """
     reverse_matrix(matrix)
+
+    return matrix
