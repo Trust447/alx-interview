@@ -25,9 +25,8 @@ def isWinner(x, nums):
         if my_filter[i]:
             y += 1
         my_filter[i] = y
-
-    
-    player1 = 0
+        
+        player1 = 0
 
     for x in nums:
         player1 += my_filter[x] % 2 == 1
